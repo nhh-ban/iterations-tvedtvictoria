@@ -21,6 +21,21 @@ transform_metadata_to_df <- function(metadata) {
     unnest_wider(latLon)
 }
 
+# Create "to_iso8601" function
+  
+library(anytime)
+library(lubridate)
+
+to_iso8601 <- function(datetime, offset_days) {
+  datetime_and_offset_days <- datetime + days(offset_days) # Adds offset_days
+  # to days in datetime
+  iso8601_format <- iso8601(datetime_and_offset_days) #Format the modified
+  # datetime to ISO8601-format
+  return(iso8601_format)
+}
+
+
+
 
 
   
