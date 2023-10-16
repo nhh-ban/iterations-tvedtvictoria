@@ -26,13 +26,27 @@ transform_metadata_to_df <- function(metadata) {
 library(anytime)
 library(lubridate)
 
-to_iso8601 <- function(datetime, offset_days) {
-  datetime_and_offset_days <- datetime + days(offset_days) # Adds offset_days
-  # to days in datetime
-  iso8601_format <- iso8601(datetime_and_offset_days) #Format the modified
-  # datetime to ISO8601-format
-  return(iso8601_format)
+
+# Define the to_iso8601 function
+to_iso8601 <- function(date_time, offset_days) {
+  # Add the offset in days
+  adjusted_date <- date_time + days(offset_days)
+  # Converts the adjusted_date to ISO8601 format. Tried to use the iso8601
+  # function to do this, but did not find out exactly how to include the "Z" at
+  # the end of the printed result when using this function. Therefore, I decided
+  # to just format it manually
+  iso8601_date <- format(adjusted_date, "%Y-%m-%dT%H:%M:%SZ")
+  
+  return(iso8601_date)
 }
+
+
+
+
+
+
+
+
 
 
 

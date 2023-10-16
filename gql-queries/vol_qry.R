@@ -1,11 +1,11 @@
 # Create vol_qry(id, from, to)-function
 
 vol_qry <- function(id, from, to) {
-  query <- glue::glue("
+  query <- glue::glue('
     {{
-      trafficData(trafficRegistrationPointId: '{id}') {{
+      trafficData(trafficRegistrationPointId: "{id}") {{
         volume {{
-          byHour(from: '{from}', to: '{to}') {{
+          byHour(from: "{from}", to: "{to}") {{
             edges {{
               node {{
                 from
@@ -21,11 +21,10 @@ vol_qry <- function(id, from, to) {
         }}
       }}
     }}
-  ", id = id, from = from, to = to)
+  ', id = id, from = from, to = to)
   
   return(query)
 }
-
 
 
 # Double braces help to distinguish glue expressions from other characters in
@@ -40,18 +39,20 @@ GQL(
     id = stations_metadata_df$id[1],
     from = to_iso8601(stations_metadata_df$latestData[1], -4),
     to = to_iso8601(stations_metadata_df$latestData[1], 0)),
-  .url = configs$vegvesen_url
+  .url = configs$vegvesen_url[1]
 )
 
-# I get syntax error when trying to verify the vol_qry function, even though
-# the vol_qry function returns the correct values (see below)
 
-test_query <-  vol_qry(
+
+
+# I used the example below to check if the function printed the correct answer
+
+vol_qry(
   id = stations_metadata_df$id[1],
   from = to_iso8601(stations_metadata_df$latestData[1], -4),
   to = to_iso8601(stations_metadata_df$latestData[1], 0))
 
-print(test_query)
+
 
 
 
