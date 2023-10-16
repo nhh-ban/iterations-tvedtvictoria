@@ -174,7 +174,7 @@ GQL(
 
 After completing task number 5 you should be able to run the entire `iterations.r`-script. In order to do that you must add a function `transform_volumes()` (see line 62) to the file `functions/data_transformations.r`, that transforms the json-return from the API to a data frame that can be used for plotting. 
 
-
+*Due to some problems I ran into when creating the to_iso8601 function (how to add the "Z"), I got errors when running the vol_qry function (due to the "Z" missing). Since I used too much time trying to solve this using the iso8601 function, I ended up not having time to start task 5 and 6*
 
 ## Task 6 - making the plot prettier
 
