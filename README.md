@@ -1,11 +1,12 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/mJpP5ERB)
 # :wave: Welcome to the iteration assignment in BAN400!
 This is the iteration assignment in BAN400. As you know -- given that you have come this far -- the assignments in BAN400 will be organized through Github and Github Classroom. By accepting this assignment, the repository will be copied to your Github user so that you can clone it to your own personal machine and work on it. Then, you simply commit your changes and push back to Github when you are done. You can commit and push as much as you want before the deadline.
 
-**Date:**
+**Date: 17.10.2023** 
 
-**Name:**
+**Name: Victoria Olsen Tvedt**
 
-**Student number:**
+**Student number: s221264**
 
 ## :information_source: Problem 1
 Update the personal information above.
@@ -173,7 +174,7 @@ GQL(
 
 After completing task number 5 you should be able to run the entire `iterations.r`-script. In order to do that you must add a function `transform_volumes()` (see line 62) to the file `functions/data_transformations.r`, that transforms the json-return from the API to a data frame that can be used for plotting. 
 
-
+*Due to some problems I ran into when creating the to_iso8601 function (how to add the "Z"), I got errors when running the vol_qry function (due to the "Z" missing). Since I used too much time trying to solve this using the iso8601 function, I ended up not having time to start task 5 and 6*
 
 ## Task 6 - making the plot prettier
 

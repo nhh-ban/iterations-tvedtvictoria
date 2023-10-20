@@ -31,7 +31,6 @@ stations_metadata <-
     .url = configs$vegvesen_url
     ) 
 
-
 #### 2: Transforming metadata
 
 source("functions/data_transformations.r")
@@ -65,5 +64,5 @@ stations_metadata_df %>%
   theme_classic()
 
 
-
+ 
 
